@@ -38,6 +38,7 @@ public class M_LongestSubstringWithoutRepeatingCharacters {
 		M_LongestSubstringWithoutRepeatingCharacters sol = new M_LongestSubstringWithoutRepeatingCharacters();
 		System.out.println(sol.lengthOfLongestSubstring("abcabcbb"));
 		System.out.println(sol.lengthOfLongestSubstring(""));
+		System.out.println(sol.lengthOfLongestSubstring("a"));
 		System.out.println(sol.lengthOfLongestSubstring("bbbb"));
 		System.out.println(sol.lengthOfLongestSubstring("pwwkew"));
 		System.out.println(sol.lengthOfLongestSubstring("abcbdf"));
