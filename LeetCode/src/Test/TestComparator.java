@@ -18,8 +18,8 @@ public class TestComparator {
 			public int compare(Integer a, Integer b) {
 				// ascending order
 				if (a > b)
-					return 1; // -1 will swap the object location
-				return -1; // 0,1 won't do anything
+					return 1; // 1 will swap the object location
+				return -1; // 0,-1 won't do anything
 			}
 		});
 		System.out.println(x);
@@ -29,8 +29,8 @@ public class TestComparator {
 			public int compare(Integer a, Integer b) {
 				// descending order
 				if (a > b)
-					return -1; // -1 will swap the object location
-				return 1; // 0,1 won't do anything
+					return -1; // 1 will swap the object location
+				return 1; // 0,-1 won't do anything
 			}
 		});
 		System.out.println(x);
@@ -71,7 +71,15 @@ public class TestComparator {
 		empList.forEach((Employee) -> System.out.println(Employee));
 		System.out.println();
 		
-
+		System.out.println(" Name sort in descending order using comparator");
+		Collections.sort(empList,(a,b) -> b.getName().compareTo(a.getName()));
+		empList.forEach((Employee) -> System.out.println(Employee));
+		System.out.println();
+		
+		System.out.println(" Age sort in ascending order using comparator");
+		Collections.sort(empList,(a,b) -> a.getAge() - b.getAge());
+		empList.forEach((Employee) -> System.out.println(Employee));
+		System.out.println();
 	}
 }
 

@@ -7,9 +7,8 @@ public class M_424_LongestRepeatingCharacterReplacement {
     	int maxFreq = 0, maxLen = 0, start = 0;
     	
     	for(int end = 0; end < s.length(); end++) {
-//    		count[i - 'A'] += 1; 
     		maxFreq = Math.max(maxFreq, ++count[s.charAt(end) - 'A']);
-    		while(end - start + 1 - maxFreq > k) {
+    		while(end - start + 1 - maxFreq > k) {	// instead of while if condition is used time increased by double
     			count[s.charAt(start) - 'A']--;
     			start++;
     		}
@@ -21,5 +20,6 @@ public class M_424_LongestRepeatingCharacterReplacement {
     	M_424_LongestRepeatingCharacterReplacement sol = new M_424_LongestRepeatingCharacterReplacement();
     	System.out.println(sol.characterReplacement("ABAB", 2));
     	System.out.println(sol.characterReplacement("AABABBA", 1));
+    	System.out.println(sol.characterReplacement("AAEBAE", 1)); 
     }
 }
