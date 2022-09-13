@@ -80,6 +80,11 @@ public class TestComparator {
 		Collections.sort(empList,(a,b) -> a.getAge() - b.getAge());
 		empList.forEach((Employee) -> System.out.println(Employee));
 		System.out.println();
+		
+		int[][] z = new int[][] {{1,2},{3,5},{6,7},{8,10},{12,16},{4,8}};
+		System.out.println(Arrays.deepToString(z));
+		Arrays.sort(z, (a,b) -> a[0] - b[0]);
+		System.out.println(Arrays.deepToString(z));
 	}
 }
 
