@@ -5,7 +5,7 @@ import java.util.Queue;
 
 import utility.functions.TreeNode;
 
-public class M_BinaryTreeLevelOrderTraversal {
+public class M_102_BinaryTreeLevelOrderTraversal {
 	
 	public List<List<Integer>> levelOrder(TreeNode root) {
 		List<List<Integer>> res = new ArrayList<List<Integer>>();
@@ -30,7 +30,7 @@ public class M_BinaryTreeLevelOrderTraversal {
 		root.right = new TreeNode(20);
 		root.right.left = new TreeNode(15);
 		root.right.right = new TreeNode(7);
-		M_BinaryTreeLevelOrderTraversal sol = new M_BinaryTreeLevelOrderTraversal();
+		M_102_BinaryTreeLevelOrderTraversal sol = new M_102_BinaryTreeLevelOrderTraversal();
 		System.out.println(sol.levelOrder(root));
 	}
 }
